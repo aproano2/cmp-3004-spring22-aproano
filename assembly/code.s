@@ -3,27 +3,38 @@
 	.globl	sum
 	.type	sum, @function
 sum:
-.LFB0:
+.LFB23:
 	.cfi_startproc
 	endbr64
-	pushq	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp
-	.cfi_def_cfa_register 6
-	movl	%edi, -20(%rbp)
-	movl	%esi, -24(%rbp)
-	movl	-20(%rbp), %edx
-	movl	-24(%rbp), %eax
-	addl	%edx, %eax
-	movl	%eax, -4(%rbp)
-	movl	-4(%rbp), %eax
-	popq	%rbp
-	.cfi_def_cfa 7, 8
+	leal	(%rdi,%rsi), %eax
 	ret
 	.cfi_endproc
-.LFE0:
+.LFE23:
 	.size	sum, .-sum
+	.section	.rodata.str1.1,"aMS",@progbits,1
+.LC0:
+	.string	"%d"
+	.text
+	.globl	main
+	.type	main, @function
+main:
+.LFB24:
+	.cfi_startproc
+	endbr64
+	subq	$8, %rsp
+	.cfi_def_cfa_offset 16
+	movl	$6, %edx
+	leaq	.LC0(%rip), %rsi
+	movl	$1, %edi
+	movl	$0, %eax
+	call	__printf_chk@PLT
+	movl	$0, %eax
+	addq	$8, %rsp
+	.cfi_def_cfa_offset 8
+	ret
+	.cfi_endproc
+.LFE24:
+	.size	main, .-main
 	.ident	"GCC: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0"
 	.section	.note.GNU-stack,"",@progbits
 	.section	.note.gnu.property,"a"
