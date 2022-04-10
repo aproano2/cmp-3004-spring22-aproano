@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>procs-pt2 slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>mem slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
@@ -14652,111 +14652,35 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Housekeeping">Housekeeping<a class="anchor-link" href="#Housekeeping">&#182;</a></h2><ul>
-<li>Homework 2</li>
-<li>Project proposal</li>
-<li>Midterm</li>
-</ul>
-
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Review">Review<a class="anchor-link" href="#Review">&#182;</a></h2>
 </div>
 </div>
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="The-Processor">The Processor<a class="anchor-link" href="#The-Processor">&#182;</a></h2><h2 id="Internal-Architecture">Internal Architecture<a class="anchor-link" href="#Internal-Architecture">&#182;</a></h2><p>General internal architecture and basic function of a processor:</p>
-<table><tr>
-<td> <img src="cpu_arch.png" alt="Drawing" style="width: 400px;"/> </td>
-<td> <img src="cpu_op.png" alt="Drawing" style="width: 250px;"/> </td>
-</tr></table>
+<h2 id="Pipeline-hazards">Pipeline hazards<a class="anchor-link" href="#Pipeline-hazards">&#182;</a></h2><p>There are situations in pipelining when the next instruction cannot execute in the
+following clock cycle</p>
+
 </div>
 </div>
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Machine-Cycle-and-T-states">Machine Cycle and T-states<a class="anchor-link" href="#Machine-Cycle-and-T-states">&#182;</a></h3><ul>
-<li><strong>Machine cycle:</strong> time-slice during 1-byte (or 1 word) of data are transacted between the processor and some external device (memory or I/O)</li>
-<li><strong>T-state:</strong> an oscillation of the processor clock</li>
-</ul>
-<p><img src="./cpu_t.png" alt=""></p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">2</span> <span class="o">*</span> <span class="mi">10</span><span class="o">^</span><span class="mi">9</span> <span class="n">clocks</span> <span class="o">/</span> <span class="n">sec</span>
-<span class="n">CPI</span> <span class="o">=</span> <span class="mi">4</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Machine-Cycle-and-T-states">Machine Cycle and T-states<a class="anchor-link" href="#Machine-Cycle-and-T-states">&#182;</a></h3><ul>
-<li>The performance of a computer is determined by three key factors: <ul>
-<li>instruction count</li>
-<li>clock cycle time</li>
-<li>clock cycles per instruction (CPI)</li>
-</ul>
-</li>
-<li>Compiler and the instruction set architecture determine the instruction count required for a given program</li>
-<li>The implementation of the processor determines both the clock cycle time and the number of clock cycles per instruction</li>
-</ul>
-
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Interrups">Interrups<a class="anchor-link" href="#Interrups">&#182;</a></h3><p>Timing, Control and Response example: interrupt</p>
+<h3 id="Structural-hazards">Structural hazards<a class="anchor-link" href="#Structural-hazards">&#182;</a></h3><p>The hardware cannot support the combination of instructions that are requested to be executed in the same clock cycle</p>
 <ul>
-<li>Interrupt Service Routine (ISR): special program segment with a pre-defined address<ul>
-<li>The processor executes the ISR in response to interrupt (external  async signal)</li>
-</ul>
-</li>
-<li>The processor cannot leave an instruction’s execution half-way </li>
-<li>Solution: processors reserve a particular time-slot for checking the existence of any interrupt input signal during the execution of every instruction<ul>
-<li>8085 reserves the penultimate T-state of the last machine cycle  of any instruction for interrupt signal checking.</li>
+<li>Washer-dryer combination instead of a separate washer and dryer</li>
+<li>MIPS has two memories. Without two memories, the pipeline could have a structural hazard <ul>
+<li>accessing data v. fetching instruction</li>
 </ul>
 </li>
 </ul>
@@ -14764,26 +14688,25 @@ div.jp-OutputPrompt {
 </div>
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="A-Basic-MIPS-Implementation">A Basic MIPS Implementation<a class="anchor-link" href="#A-Basic-MIPS-Implementation">&#182;</a></h2><p>MIPS is a family of reduced instruction set computer instruction set architectures developed by MIPS Computer Systems</p>
-<p>We will be examining an implementation that includes a subset of the core MIPS instruction set:</p>
+<h3 id="Data-hazards">Data hazards<a class="anchor-link" href="#Data-hazards">&#182;</a></h3><p>The pipeline must be stalled because one step must wait for another to complete</p>
 <ul>
-<li>The memory-reference instructions load word (lw) and store word (sw)<ul>
-<li><code>load 4(edx)</code></li>
+<li>Dependence of one instruction on an earlier one that is still in the pipeline</li>
 </ul>
-</li>
-<li>The arithmetic-logical instructions add, sub, AND, OR<ul>
-<li><code>add edx, eax</code></li>
-</ul>
-</li>
-<li>The instructions branch equal (beq) and jump (j)<ul>
-<li><code>jne loop</code></li>
+
+<pre><code>add $s0, $t0, $t1
+sub $t2, $s0, $t3</code></pre>
+<ul>
+<li><p>The add instruction doesn’t write the result until the fifth stage. Three clock cycles in the pipeline are wasted</p>
+<ul>
+<li>Solution: waiting for instruction completion before trying to resolve the data hazard is not required</li>
+<li>As soon as the ALU creates the sum for the add, it can be supplied as an input for the subtract</li>
 </ul>
 </li>
 </ul>
@@ -14791,22 +14714,6 @@ div.jp-OutputPrompt {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">edx</span> <span class="o">+</span> <span class="mi">4</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -14814,244 +14721,246 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="./cpu_op.png" alt=""></p>
+
+<pre><code>lw $t0, [10]
+add $s0, $t0, $t1
+sub $t2, $s0, $t3</code></pre>
 
 </div>
 </div>
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Instructions-compute-requirements">Instructions compute requirements<a class="anchor-link" href="#Instructions-compute-requirements">&#182;</a></h3><ul>
-<li><p>For all these instructions:</p>
+<h3 id="Forwarding-or-Bypassing">Forwarding or Bypassing<a class="anchor-link" href="#Forwarding-or-Bypassing">&#182;</a></h3><ul>
+<li>Extra hardware is added to retrieve the missing item early from the internal resources</li>
+<li>Forwarding paths are valid only if the destination stage is later in time than the source stage</li>
+</ul>
+<p><img src="./pipe5.png" alt=""></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Stalling">Stalling<a class="anchor-link" href="#Stalling">&#182;</a></h3><p>It cannot prevent all pipeline stalls. A stall is needed when an R-format instruction follows a load</p>
+
+<pre><code>lw $s0, 20($t1)
+sub $t2, $s0, $t3</code></pre>
+<p><img src="./pipe6.png" alt=""></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Control-hazards">Control hazards<a class="anchor-link" href="#Control-hazards">&#182;</a></h3><p>A decision is made based on the results of one instruction while others are executing</p>
+<ul>
+<li><p>The instruction following the branch instruction must be fetched on the next clock cycle. Nevertheless, the pipeline cannot possibly know what is the next instruction</p>
+</li>
+<li><p><strong>Option 1:</strong> after fetching a branch, wait until to determine the instruction address to fetch from (stall: larger slowdown)</p>
+</li>
+<li><p><strong>Option 2:</strong> predicting what branches are taken and what are not. Dynamic hardware predictors provide behavioral-based prediction for each branch and may change predictions over the life of a program</p>
+<ul>
+<li>Analyze the history of taken or untaken branches to predict the future​</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Delayed-decision">Delayed decision<a class="anchor-link" href="#Delayed-decision">&#182;</a></h3><ul>
+<li><strong>Option 3:</strong> delayed decision (MIPS). The delayed branch always executes the next sequential instruction, with the branch taking place after that one instruction delay<ul>
+<li>Execute something independent from the branch, so that cycle is not wasted</li>
+</ul>
+</li>
+<li>MIPS software always schedules a branch-independent instruction after the branch, and a taken branch changes the address of the instruction that follows this safe instruction</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Pipelined-datapath-and-control">Pipelined datapath and control<a class="anchor-link" href="#Pipelined-datapath-and-control">&#182;</a></h2><p>We can structure our datapath in a way that we can execute up to five instructions in the same cycle.</p>
+<p>We separate the instructions into five pieces:</p>
 <ol>
-<li>Program counter (PC) determines the memory address that contains the instruction to be fetched<ul>
-<li>Since we need the PC to increment, we use the ALU in all instructions</li>
-</ul>
-</li>
-<li>Read one or two registers, using fields of the instruction to select the registers to read. For the load word instruction, only one register is read. Other instructions require reading two registers</li>
+<li>IF: Instruction fetch</li>
+<li>ID: Instruction decode and register fi le read</li>
+<li>EX: Execution or address calculation</li>
+<li>MEM: Data memory access</li>
+<li>WB: Write back</li>
 </ol>
-</li>
-<li><p>All instruction classes, except jump, use the ALU after reading the registers</p>
-<ul>
-<li>Memory-reference for an address calculation</li>
-<li>Arithmetic-logical for the operation execution</li>
-<li>Branches for comparison</li>
-</ul>
-</li>
-</ul>
 
 </div>
 </div>
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Instructions-compute-requirements">Instructions compute requirements<a class="anchor-link" href="#Instructions-compute-requirements">&#182;</a></h3><ul>
-<li><p>After using the ALU, the actions required to complete various instruction classes differ:</p>
-<ul>
-<li><strong>Memory-reference</strong> will need to access the memory to read or write data</li>
-<li><strong>Arithmetic-logical</strong> must write the data from the ALU or memory back into a register</li>
-<li><strong>Branch instruction</strong> requires to change the next instruction address based on the comparison. Otherwise, PC should be incremented to get the address of the next instruction</li>
-</ul>
-</li>
-</ul>
+<h3 id="Pipelined-datapath-with-hazard-detection">Pipelined datapath with hazard detection<a class="anchor-link" href="#Pipelined-datapath-with-hazard-detection">&#182;</a></h3><p><img src="./pipe_dp20.png" alt=""></p>
 
 </div>
 </div>
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Architecture-of-the-processor">Architecture of the processor<a class="anchor-link" href="#Architecture-of-the-processor">&#182;</a></h3><p><img src="./mips2.png" alt=""></p>
+<h2 id="Computer-memory-system">Computer memory system<a class="anchor-link" href="#Computer-memory-system">&#182;</a></h2><p>It's a way to preserve the state of a bit. It helps us remember the output of a circuit</p>
+<ul>
+<li>Basic implementation using AND, OR and NOT</li>
+<li>Circuit to be part of the homework</li>
+</ul>
 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">add</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span>
-<span class="n">mov</span> <span class="n">c</span><span class="p">,</span> <span class="mi">4</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
-<span class="n">mov</span> <span class="mi">4</span><span class="p">(</span><span class="n">r</span><span class="p">),</span> <span class="n">a</span>
-<span class="n">add</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">d</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">block</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="mi">0</span> <span class="o">-</span> <span class="mi">3</span>
-<span class="mi">4</span> <span class="o">-</span> <span class="mi">7</span>
-<span class="mi">8</span> <span class="o">-</span> <span class="mi">11</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Datapath">Datapath<a class="anchor-link" href="#Datapath">&#182;</a></h2><p>It is a collection of functional units such as ALUs or multipliers, registers, and buses that carry out the fuctional operations</p>
+<h3 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h3><p>Memory exhibits perhaps the widest range of type, technology, organization, performance, and cost of any feature of a computer system</p>
 <ul>
-<li>MIPS’ datapath consist of:<ul>
-<li><strong>Combinational elements</strong> that operate on data values. No internal storage (e.g. ALU)<ul>
-<li>outputs depend on the inputs</li>
+<li><p>No single technology is optimal in satisfying the memory requirements for a computer system</p>
+</li>
+<li><p>Typical computer system is equipped with a hierarchy of memory subsystems</p>
+</li>
+<li><p><strong>Internal:</strong> directly accessible by the processor</p>
+</li>
+<li><p><strong>External:</strong> accessible by the processor via an I/O module</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Types-of-memory">Types of memory<a class="anchor-link" href="#Types-of-memory">&#182;</a></h2><p><img src="/home/aproano/github.com/aproano2/cmp-3004-spring22-aproano/memory/mem1.png" alt=""></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Access-methods">Access methods<a class="anchor-link" href="#Access-methods">&#182;</a></h3><ul>
+<li><strong>Sequential</strong><ul>
+<li>Memory is organized into units of data, called records.</li>
+<li>Access must be made in a specific linear sequence</li>
 </ul>
 </li>
-<li><strong>State elements</strong> that contain state in some internal storage (e.g. Registers and Memories)<ul>
-<li>if we disconnect the computer, we can reload the state and carry on</li>
+<li><strong>Direct</strong><ul>
+<li>Individual blocks or records have a unique address based on physical location</li>
+<li>Access is accomplished by direct access to reach a general vicinity plus sequential searching, counting, or waiting to reach the final location. </li>
+</ul>
+</li>
+<li><strong>Random</strong><ul>
+<li>Each addressable location in memory has a unique, physically wired-in addressing mechanism.</li>
+<li>The time to access a given location is independent of the sequence of prior accesses and is constant.</li>
+</ul>
+</li>
+<li><strong>Associative</strong><ul>
+<li>Random access type of memory</li>
+<li>Enables one to make a comparison of desired bit locations within a word for a specified match, and to do this for all words simultaneously</li>
+<li>A word is retrieved based on a portion of its contents rather than its address.</li>
 </ul>
 </li>
 </ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Performance">Performance<a class="anchor-link" href="#Performance">&#182;</a></h3><ul>
+<li><p><strong>Access Time (latency):</strong> For RAM, the time required to perform a read or write operation. For non-RAM, the time required to position the read/write mechanism at the desired location.</p>
+</li>
+<li><p><strong>Memory cycle time:</strong> The access time plus any additional time required before the start of second access (RAM).</p>
+<ul>
+<li><p>For transients to die out on signal lines or to regenerate data if they are read destructively.</p>
+</li>
+<li><p>Memory cycle time is concerned with the system bus.</p>
 </li>
 </ul>
-<p><strong>We are going to assume that registers are 16-bit long, and the memory unit uses 32-bit addresses</strong></p>
-
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Clocking-methodology">Clocking methodology<a class="anchor-link" href="#Clocking-methodology">&#182;</a></h3><p>It defines the read/write process of signals</p>
-<ul>
-<li><strong>Edge-triggered methodology:</strong> any values stored in a sequential element are updated only on a clock edge</li>
-<li>This methodology allows reading the contents of a register, sending the value through some combinational logic, and writing that register in the same clock cycle</li>
-</ul>
-<p><img src="./mips3.png" alt=""></p>
-
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Building-a-datapath">Building a datapath<a class="anchor-link" href="#Building-a-datapath">&#182;</a></h3><p>If we are going to build our datapath from scratch:</p>
-<ul>
-<li>what elements do we need?</li>
-<li>why do we pick those elements?</li>
-<li>where do we start?</li>
+</li>
+<li><strong>Transfer rate:</strong> This is the rate at which data can be transferred into or out of a memory unit.</li>
 </ul>
 
 </div>
 </div>
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Building-a-datapath">Building a datapath<a class="anchor-link" href="#Building-a-datapath">&#182;</a></h3><p>What basic datapath elements do we need to fetch instructions from a program?</p>
-<p><img src="./mips4.png" alt=""></p>
-<p>To fetch and execute an instruction we need three elements</p>
-
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="R-type-instructions">R-type instructions<a class="anchor-link" href="#R-type-instructions">&#182;</a></h3><p><strong>R-type instructions or arithmetic-logical instructions</strong> read two registers, perform an ALU operation, and write the result to a register</p>
-<p><img src="./mips5.png" alt=""></p>
-
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Loads-and-writes">Loads and writes<a class="anchor-link" href="#Loads-and-writes">&#182;</a></h3><p><img src="./mips6.png" alt=""></p>
+<h3 id="Memory-hierarchy">Memory hierarchy<a class="anchor-link" href="#Memory-hierarchy">&#182;</a></h3><ul>
+<li><p>Trade-offs among three key characteristics of memory: capacity, access time and cost</p>
+</li>
+<li><p>Important relationships across the spectrum of technologies:</p>
 <ul>
-<li>the memory unit is a state element with inputs for the address and the write data, and a single output for the read result</li>
-<li>we will need a unit to sign-extend the 16-bit off set field in the instruction to a 32-bit signed value</li>
+<li>Faster access time, greater cost per bit</li>
+<li>Greater capacity, smaller cost per bit</li>
+<li>Greater capacity, slower access time<ul>
+<li>Large-capacity memory: capacity is needed and cost per bit is low</li>
+<li>To meet performance requirements: expensive, relatively lower-capacity memories with short access times</li>
 </ul>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">reg_size</span> <span class="mi">2</span>       <span class="c1"># addr = 2**2 </span>
-<span class="n">mem_size</span> <span class="mi">4</span>       <span class="c1"># add = 4**2</span>
-<span class="mi">10</span> <span class="o">-&gt;</span> <span class="mi">0010</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Branches">Branches<a class="anchor-link" href="#Branches">&#182;</a></h3><p>Branch on Equal instruction (beq) branches if the two registers are equal. Jump from beq to x</p>
-<p><img src="./mips7.png" alt=""></p>
-<ul>
-<li>uses the ALU to evaluate the branch condition</li>
-<li>a separate adder to compute the branch target as the sum of the incremented PC and the sign-extended, lower 16 bits of the instruction (the branch displacement), shifted left 2 bits<ul>
-<li>the left shift increases the offset by a factor of 4 (e.g., 11 -&gt; 1100)</li>
+</li>
 </ul>
 </li>
 </ul>
@@ -15066,39 +14975,7 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Building-a-single-datapath">Building a single datapath<a class="anchor-link" href="#Building-a-single-datapath">&#182;</a></h3><p>The datapath for the memory instructions and the R-type instructions</p>
-<p><img src="./mips8.png" alt=""></p>
-
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Building-a-simple-datapath">Building a simple datapath<a class="anchor-link" href="#Building-a-simple-datapath">&#182;</a></h3><p>The datapath for the main MIPS instructions</p>
-<p><img src="./mips9.png" alt=""></p>
-<p>The control unit takes inputs and generates write signals for each datapath element​</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Simple-implementation-schema">Simple implementation schema<a class="anchor-link" href="#Simple-implementation-schema">&#182;</a></h2><p>Based on the datapath we designed, we now define a simple instruction set</p>
-<p><strong>ALU Control:</strong> 6 following combinations of four control inputs are needed by all types of instructions</p>
-<p><img src="./mips10.png" alt=""></p>
-<p>Remember that the <code>OPcode</code> part of the machine instruction determines the instruction that the datapath will execute</p>
-
-<pre><code>- How do we distinguish between the sum required to load from memory, and the sum of two numbers?</code></pre>
+<h3 id="The-memory-hierarchy-dilemma">The memory hierarchy dilemma<a class="anchor-link" href="#The-memory-hierarchy-dilemma">&#182;</a></h3><p><img src="/home/aproano/github.com/aproano2/cmp-3004-spring22-aproano/memory/mem2.png" alt="Drawing" style="width: 400px;"/></p>
 
 </div>
 </div>
@@ -15111,13 +14988,7 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">00</span> <span class="mi">1010</span>
-<span class="mi">01</span> <span class="mi">0101</span>
-<span class="mi">10</span> <span class="mi">0010</span>
-
-<span class="n">ALUOP</span> <span class="o">|</span> <span class="n">CONTROL</span>
-<span class="mi">00</span>
-<span class="mi">01</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
      </div>
@@ -15125,117 +14996,6 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">OPCODE</span> <span class="o">|</span> <span class="n">OPERANDS</span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="ALU-control-unit">ALU control unit<a class="anchor-link" href="#ALU-control-unit">&#182;</a></h3><p>Small control unit: it receives an extra 2-bit field ALUOp</p>
-<ul>
-<li>The opcode sets the ALUOp bits</li>
-<li>ALUOp = 00 or 01, ignore the function code field</li>
-<li>ALUOp = 10, use the function code field</li>
-</ul>
-<p><img src="./mips11.png" alt=""></p>
-
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="How-instructions-are-structured">How instructions are structured<a class="anchor-link" href="#How-instructions-are-structured">&#182;</a></h3><p><img src="./mips12.png" alt=""></p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">addr</span> <span class="o">=</span> <span class="n">rs</span> <span class="o">+</span> <span class="n">address</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Distribution-to-datapath">Distribution to datapath<a class="anchor-link" href="#Distribution-to-datapath">&#182;</a></h3><p><img src="./mips13.png" alt=""></p>
-
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Control-signals">Control signals<a class="anchor-link" href="#Control-signals">&#182;</a></h3><p>The control signals can be set based solely on the opcode field of the instruction (bits 31:26)</p>
-<p><img src="./mips14.png" alt=""></p>
-
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Datapath-with-control-unit">Datapath with control unit<a class="anchor-link" href="#Datapath-with-control-unit">&#182;</a></h3><p><img src="./mips15.png" alt=""></p>
-
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Exercise:">Exercise:<a class="anchor-link" href="#Exercise:">&#182;</a></h3><p>Read and understand the JUMP example in chapter 4</p>
-
-</div>
-</div>
-</div>
 </div></section></section>
 </div>
 </div>
